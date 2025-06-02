@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 스마트폰 배경 -->
+  <rect x="20" y="10" width="60" height="80" rx="12" ry="12" fill="url(#grad1)" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- 스크린 -->
+  <rect x="25" y="18" width="50" height="64" rx="8" ry="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- 홈 버튼 -->
+  <circle cx="50" cy="88" r="3" fill="#64748b"/>
+  
+  <!-- 계산기 아이콘 -->
+  <rect x="30" y="25" width="40" height="30" rx="4" ry="4" fill="#2563eb" opacity="0.8"/>
+  
+  <!-- 버튼들 -->
+  <rect x="33" y="28" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="43" y="28" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="53" y="28" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  
+  <rect x="33" y="36" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="43" y="36" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="53" y="36" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  
+  <rect x="33" y="44" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="43" y="44" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  <rect x="53" y="44" width="8" height="6" rx="1" fill="white" opacity="0.9"/>
+  
+  <!-- 원화 기호 -->
+  <text x="50" y="68" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#10b981">₩</text>
+</svg> 
