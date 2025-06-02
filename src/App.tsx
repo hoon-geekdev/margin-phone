@@ -138,126 +138,130 @@ const Calculator: React.FC = () => {
           />
         </div>
 
-        {/* 계산 섹션 제목 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-              📱 단말기 (왼쪽)
-            </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              개통원금 기반 마진 계산
-            </p>
-          </div>
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
-              📞 유선 (오른쪽)
-            </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              리베이트 기반 마진 계산
-            </p>
-          </div>
-        </div>
-
         {/* 계산 섹션들 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <div className="space-y-6">
-            {/* 단말기 입력 섹션 */}
-            <div className="card p-6 border-l-4 border-blue-500">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                📱 단말기 입력값
-              </h3>
-              <div className="space-y-4">
-                {leftInputs.map((input, index) => (
-                  <InputField
-                    key={index}
-                    label={input.label}
-                    value={input.value}
-                    onChange={input.onChange}
-                  />
-                ))}
+            {/* 단말기 섹션 */}
+            <div className="space-y-4">
+              <div className="text-center mb-4">
+                <h2 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                  📱 단말기
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  개통원금 기반 마진 계산
+                </p>
               </div>
-            </div>
 
-            {/* 단말기 결과 섹션 */}
-            <div className="card p-6 border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20">
-              <h3 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-4">
-                📊 단말기 계산 결과
-              </h3>
-              <div className="space-y-3">
-                {leftResults.map((result, index) => (
-                  <div
-                    key={index}
-                    className={`flex justify-between items-center p-3 rounded-lg ${
-                      result.isHighlight
-                        ? "bg-blue-100 dark:bg-blue-800/30 border border-blue-300 dark:border-blue-600"
-                        : "bg-white dark:bg-gray-700"
-                    }`}
-                  >
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {result.label}
-                    </span>
-                    <span
-                      className={`text-lg font-bold ${
+              {/* 단말기 입력 섹션 */}
+              <div className="card p-6 border-l-4 border-blue-500">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                  📱 단말기 입력값
+                </h3>
+                <div className="space-y-4">
+                  {leftInputs.map((input, index) => (
+                    <InputField
+                      key={index}
+                      label={input.label}
+                      value={input.value}
+                      onChange={input.onChange}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* 단말기 결과 섹션 */}
+              <div className="card p-6 border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20">
+                <h3 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-4">
+                  📊 단말기 계산 결과
+                </h3>
+                <div className="space-y-3">
+                  {leftResults.map((result, index) => (
+                    <div
+                      key={index}
+                      className={`flex justify-between items-center p-3 rounded-lg ${
                         result.isHighlight
-                          ? "text-blue-600 dark:text-blue-400"
-                          : "text-gray-900 dark:text-gray-100"
+                          ? "bg-blue-100 dark:bg-blue-800/30 border border-blue-300 dark:border-blue-600"
+                          : "bg-white dark:bg-gray-700"
                       }`}
                     >
-                      {formatNumber(result.value)}원
-                    </span>
-                  </div>
-                ))}
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {result.label}
+                      </span>
+                      <span
+                        className={`text-lg font-bold ${
+                          result.isHighlight
+                            ? "text-blue-600 dark:text-blue-400"
+                            : "text-gray-900 dark:text-gray-100"
+                        }`}
+                      >
+                        {formatNumber(result.value)}원
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           <div className="space-y-6">
-            {/* 유선 입력 섹션 */}
-            <div className="card p-6 border-l-4 border-green-500">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                📞 유선 입력값
-              </h3>
-              <div className="space-y-4">
-                {rightInputs.map((input, index) => (
-                  <InputField
-                    key={index}
-                    label={input.label}
-                    value={input.value}
-                    onChange={input.onChange}
-                  />
-                ))}
+            {/* 유선 섹션 */}
+            <div className="space-y-4">
+              <div className="text-center mb-4">
+                <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
+                  📞 유선
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  리베이트 기반 마진 계산
+                </p>
               </div>
-            </div>
 
-            {/* 유선 결과 섹션 */}
-            <div className="card p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20">
-              <h3 className="text-lg font-semibold text-green-700 dark:text-green-300 mb-4">
-                📊 유선 계산 결과
-              </h3>
-              <div className="space-y-3">
-                {rightResults.map((result, index) => (
-                  <div
-                    key={index}
-                    className={`flex justify-between items-center p-3 rounded-lg ${
-                      result.isHighlight
-                        ? "bg-green-100 dark:bg-green-800/30 border border-green-300 dark:border-green-600"
-                        : "bg-white dark:bg-gray-700"
-                    }`}
-                  >
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {result.label}
-                    </span>
-                    <span
-                      className={`text-lg font-bold ${
+              {/* 유선 입력 섹션 */}
+              <div className="card p-6 border-l-4 border-green-500">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                  📞 유선 입력값
+                </h3>
+                <div className="space-y-4">
+                  {rightInputs.map((input, index) => (
+                    <InputField
+                      key={index}
+                      label={input.label}
+                      value={input.value}
+                      onChange={input.onChange}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* 유선 결과 섹션 */}
+              <div className="card p-6 border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20">
+                <h3 className="text-lg font-semibold text-green-700 dark:text-green-300 mb-4">
+                  📊 유선 계산 결과
+                </h3>
+                <div className="space-y-3">
+                  {rightResults.map((result, index) => (
+                    <div
+                      key={index}
+                      className={`flex justify-between items-center p-3 rounded-lg ${
                         result.isHighlight
-                          ? "text-green-600 dark:text-green-400"
-                          : "text-gray-900 dark:text-gray-100"
+                          ? "bg-green-100 dark:bg-green-800/30 border border-green-300 dark:border-green-600"
+                          : "bg-white dark:bg-gray-700"
                       }`}
                     >
-                      {formatNumber(result.value)}원
-                    </span>
-                  </div>
-                ))}
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {result.label}
+                      </span>
+                      <span
+                        className={`text-lg font-bold ${
+                          result.isHighlight
+                            ? "text-green-600 dark:text-green-400"
+                            : "text-gray-900 dark:text-gray-100"
+                        }`}
+                      >
+                        {formatNumber(result.value)}원
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
