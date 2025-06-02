@@ -2,7 +2,7 @@
 
 > 단말기와 유선 개통 마진을 정확하게 계산하는 전문 웹 도구
 
-[![Deploy to GitHub Pages](https://github.com/[YOUR_GITHUB_USERNAME]/margin-phorn/actions/workflows/deploy.yml/badge.svg)](https://github.com/[YOUR_GITHUB_USERNAME]/margin-phorn/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/hoon-geekdev/margin-phorn/actions/workflows/deploy.yml/badge.svg)](https://github.com/hoon-geekdev/margin-phorn/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ 주요 기능
@@ -104,7 +104,7 @@ margin-phorn/
 1. GitHub에서 새 저장소 생성 (저장소명: `margin-phorn`)
 2. 로컬에서 원격 저장소 연결:
    ```bash
-   git remote add origin https://github.com/[YOUR_GITHUB_USERNAME]/margin-phorn.git
+   git remote add origin https://github.com/hoon-geekdev/margin-phorn.git
    git push -u origin main
    ```
 3. GitHub 저장소 Settings → Pages → Source: "GitHub Actions" 선택

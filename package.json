@@ -2,7 +2,7 @@
   "name": "margin-calculator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://[YOUR_GITHUB_USERNAME].github.io/margin-phorn",
+  "homepage": "https://hoon-geekdev.github.io/margin-phorn",
   "dependencies": {
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.43",
