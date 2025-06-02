@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/margin-phone/sw.js', { scope: '/margin-phone/' })})}
