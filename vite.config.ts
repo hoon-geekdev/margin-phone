@@ -33,7 +33,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/margin-phorn/",
+  base: "/margin-phone/",
   build: {
     outDir: "dist",
     sourcemap: false,
